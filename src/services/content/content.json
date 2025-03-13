@@ -1,0 +1,42 @@
+{
+    "summary": [
+        "I'm a seasoned software engineer with a proven ability to lead initiatives. I'm a Microsoft Certified Solutions Developer and an AWS Certified Solutions Architect. I've worked across a range of industries including finance, energy and government. I'm adept in Agile and DevOps practices and can cross function in several areas. I'm also well regarded by my peers for my strong collaboration and mentoring capabilities."
+    ],
+    "skills": [
+        ".NET / C#",
+        "TypeScript / React",
+        "AWS / Azure",
+        "MSSQL / Postgres / NoSQL",
+        "Agile / DevOps / Architecture"
+    ],
+    "education":{
+        "qualifications": [
+            "BSc. Physics (Hons) - Edinburgh University"
+        ],
+        "certifications": [
+            "Microsoft Certified Solutions Developer",
+            "AWS Certified Solutions Architect",
+            "AWS Certified Developer",
+            "AWS Certified DevOps Administrator"
+        ]
+    },
+    "history": [
+        {"company": "Shell Energy", "title": "Senior Software Engineer", "start": "May 24", "end": "Nov 24", "description": "Shell is a global energy giant and I joined the Retail B2B team to augment their .NET and AWS capabilities. My main focus was to help migrate their legacy stack onto cloud-native microservices. I was also engaged in initiatives to bolster application security and code compliance. Technologies used were .NET, TypeScript, AWS and DevOps."},
+        {"company": "Wesfarmers Health", "title": "Senior Software Engineer", "start": "Oct 23", "end": "Apr 24", "description": "Wesfarmers Health owns the Priceline brand and wholesales pharmaceuticals. My main project was the integration of Priceline into the OnePass loyalty program and I acted as tech lead to extend a suite of micro-services. I also prototyped an event-driven image resizing system used to market pharmaceuticals. Technologies used were .NET, AWS, and DevOps."},
+        {"company": "NAB", "title": "Senior Developer ", "start": "May 23", "end": "Aug 23", "description": "NAB's Treasury Risk team ensures that the bank's assets are carefully managed. I worked on their Modernisation and Migration project to uplift their tech stack and migrate their apps onto Azure. Technologies used were .NET, Azure and Devops."},
+        {"company": "Eptura", "title": "Senior Software Engineer",  "start": "Oct 23", "end": "Apr 24", "description": "Eptura are a global leader in office space management solutions. I worked in their Smart Environments team developing a system to track user locations via Wi-Fi. I helped the team refactor the system into a serverless event-driven architecture as well as uplifting their DevOps practices. Technologies used were .NET 6, AWS Lambda, Kinesis, DynamoDB and Datadog."},
+        {"company": "Australia Post", "title": "Senior .NET Developer", "start": "Oct 21", "end": "Sep 22", "description": "SecurePay is a subsidiary of Australia Post and provides various online payment services. I worked as Lead API Developer on an expansion of their POLi Payments system. This new feature enables customers to pay for purchases in real-time using National Payment Platform (NPP) Pay IDs. The solution was built using a serverless micro-services architecture and mixes APIs and asynchronous queueing. Technologies used are .NET, AWS Lambda, DynamoDB, SQS, CodePipeline, X-Ray and Splunk."},
+        {"company": "OpenPay", "title": "Lead Software Engineer", "start": "Mar 21", "end": "Sep 21", "description": "Openpay was a scale-up in the Buy Now Pay Later industry and I worked as Lead Engineer in their Merchant team. My role was to devise a strategy to uplift their legacy and monolithic APIs to a serverless micro-service architecture. Technologies used were .NET Core, AWS, MSSQL and DevOps."},
+        {"company": "Appscore Digital", "title": "Senior .NET Developer", "start": "Oct 20", "end": "Mar 21", "description": "Appscore is a growing Digital Agency and I worked with their Fitness First client. I assumed a lead role on a greenfield project to build a Member Portal allowing members to manage their account and access a range of services. Technologies used were .NET, React and Azure."},
+        {"company": "Envirosuite", "title": "Senior .NET Engineer", "start": "Jul 19", "end": "Sep 19", "description": "Envirosuite is a global provider of environmental intelligence platforms and their flagship ANOMS noise compliance system is used by major airports worldwide. I worked on a project to migrate the system to a modern web-based platform using technologies such as .NET, React, GraphQL and Azure DevOps."},
+        {"company": "VicRoads", "title": "Senior .NET & AWS Developer", "start": "Aug 18", "end": "Jul 19", "description": "VicRoads is a Victorian Government Department. The role combined my .NET and AWS expertise to uplift their Cloud and DevOps capabilities. My main achievement was to re-architect an API for the Drivers Learner Kit initiative. I also took the reins for an expansion of the Drink Drug Drive program and worked on various DevOps initiatives."},
+        {"company": "BetEasy", "title": "Senior .NET Developer", "start": "Mar 16", "end": "Aug 18", "description": "BetEasy was an online wagering company. I worked as a Senior .NET Developer in their Digital team where I led new initiatives such as Credit Card Tokenisation, Racing BlackBook and Social Login. Prior to this I worked in their Core Platform team to re-engineer their Settlement engine making it capable of handling Melbourne Cup volumes with ease. Technologies used were .NET, AWS and DevOps."}
+    ],
+    "socials": {
+        "linkedInUrl": "https://www.linkedin.com/in/blairmorris",
+        "twitterUrl": "https://twitter.com/codeblitzio"
+    },
+    "about": [
+        "The CodeBlitz website is implemented as a single page application using React, TypeScript, Bootstrap and Vite. It's hosted on AWS as an S3 Static Website and accessed via a CloudFront distribution. SSL Certificates are generated by AWS Certificate Manager and domains are registered using AWS Route53."   
+    ]
+}
