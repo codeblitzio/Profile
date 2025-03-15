@@ -6,7 +6,7 @@ import Image from 'react-bootstrap/Image';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { Link } from 'react-router';
 import ContentService from '../../services/content/ContentService';
-import lightning from 'bootstrap-icons/icons/lightning-charge-fill.svg';
+import icon from 'bootstrap-icons/icons/tools.svg';
 
 const Skills: FC = () => {
 
@@ -23,7 +23,7 @@ const Skills: FC = () => {
     <Container className="px-4 py-5 my-5 text-center">
       <Row>
         <Col>
-          <Image className="mb-4" src={lightning} alt="" width="50" height="50"/>
+          <Image className="mb-4" src={icon} alt="" width="50" height="50"/>
         </Col>  
       </Row>
       <Row>

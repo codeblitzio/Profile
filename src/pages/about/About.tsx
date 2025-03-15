@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import { Link } from 'react-router';
 import ContentService from '../../services/content/ContentService';
-import lightning from 'bootstrap-icons/icons/lightning-charge-fill.svg';
+import icon from 'bootstrap-icons/icons/info-square-fill.svg';
 
 const About: FC = () => {
 
@@ -22,7 +22,7 @@ const About: FC = () => {
     <Container className="px-4 py-5 my-5 text-center">
       <Row>
         <Col>
-          <Image className="mb-4" src={lightning} alt="" width="50" height="50"/>
+          <Image className="mb-4" src={icon} alt="" width="50" height="50"/>
         </Col>  
       </Row>
       <Row>

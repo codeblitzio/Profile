@@ -3,17 +3,17 @@ import Container from 'react-bootstrap/container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
-import lightning from 'bootstrap-icons/icons/lightning-charge-fill.svg';
+import icon from 'bootstrap-icons/icons/x-octagon-fill.svg';
 
 const NotFound: FC = () => {
 
-  const text = "The resource you requested could not be found.";
+  const text = "The requested resource could not be found.";
 
   return (
     <Container className="px-4 py-5 my-5 text-center">
       <Row>
         <Col>
-          <Image className="mb-4" src={lightning} alt="" width="50" height="50"/>
+          <Image className="mb-4" src={icon} alt="" width="50" height="50"/>
         </Col>  
       </Row>
       <Row>

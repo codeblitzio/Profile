@@ -9,7 +9,7 @@ import NotFound from '../pages/notfound/NotFound';
 
 const Routing: FC = () => {
 
-  return ( 
+  return (
     <Routes>
       <Route path="/" element={<Profile/>}/>
       <Route path="/education" element={<Education/>}/>
