@@ -1,18 +1,14 @@
+import { FC, useState, useEffect } from 'react';
 import Container from 'react-bootstrap/container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
-import Button from 'react-bootstrap/Button';
 import Accordion from 'react-bootstrap/Accordion';
+import { Link } from 'react-router'
+import ContentService, { IHistory } from '../../services/content/ContentService';
 import lightning from 'bootstrap-icons/icons/lightning-charge-fill.svg';
-import { IContentService, IHistory } from '../../services/content/ContentService';
-import { FC, useState, useEffect } from 'react';
 
-interface IHistoryProps {
-  contentService: IContentService
-}
-
-const History: FC<IHistoryProps> = (props) => {
+const History: FC = () => {
 
   // useState and useEffect hooks may be overkill here 
   // but in a real-world app we'de be pulling the content from an external source 
@@ -20,8 +16,8 @@ const History: FC<IHistoryProps> = (props) => {
   const [history, setHistory] = useState<IHistory[]>([]);
 
   useEffect(() => {
-    return setHistory(props.contentService.getHistory());
-  }, [props.contentService]);
+    return setHistory(new ContentService().getHistory());
+  }, []);
 
   return (
     <Container className="px-4 py-5 my-5 text-center">
@@ -55,12 +51,11 @@ const History: FC<IHistoryProps> = (props) => {
       </Row>
       <Row>
         <Col>
-          <Button variant="outline-secondary" className="btn-lg px-4 gap-3" href="/">Back</Button>
+          <Link className="btn btn-outline-secondary btn-lg px-4 gap-3" to="/">Back</Link>
         </Col>
       </Row>
     </Container>
   )
 };
 
-export type { IHistoryProps }
 export default History;

@@ -1,17 +1,13 @@
+import { FC, useState, useEffect } from 'react';
 import Container from 'react-bootstrap/container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
-import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router';
 import lightning from 'bootstrap-icons/icons/lightning-charge-fill.svg';
-import { IContentService } from '../../services/content/ContentService';
-import { FC, useState, useEffect } from 'react';
+import ContentService  from '../../services/content/ContentService';
 
-interface IProfileProps {
-  contentService: IContentService
-} 
-
-const Profile: FC<IProfileProps> = (props) => {
+const Profile: FC = () => {
 
   // useState and useEffect hooks may be overkill here 
   // but in a real-world app we'de be pulling the content from an external source 
@@ -19,8 +15,8 @@ const Profile: FC<IProfileProps> = (props) => {
   const [summary, setSummary] = useState<string[]>([]);
 
   useEffect(() => {
-    return setSummary(props.contentService.getSummary());
-  }, [props.contentService]);
+    return setSummary(new ContentService().getSummary());
+  }, []);
 
   return (
     <Container className="px-4 py-5 my-5 text-center">
@@ -51,14 +47,13 @@ const Profile: FC<IProfileProps> = (props) => {
       </Row>
       <Row>
         <Col className="d-grid gap-3 d-sm-flex justify-content-sm-center">
-          <Button variant="outline-secondary" size="lg" className="px-4" href="/education">Education</Button>
-          <Button variant="outline-secondary" size="lg" className="px-4" href="/skills">Skills</Button>
-          <Button variant="outline-secondary" size="lg" className="px-4" href="/history">History</Button>
+          <Link className="btn btn-outline-secondary btn-lg px-4" to="/education">Education</Link>
+          <Link className="btn btn-outline-secondary btn-lg px-4" to="/skills">Skills</Link>
+          <Link className="btn btn-outline-secondary btn-lg px-4" to="/history">History</Link>
         </Col>
       </Row>
     </Container>
   )
 };
 
-export type { IProfileProps };
 export default Profile;

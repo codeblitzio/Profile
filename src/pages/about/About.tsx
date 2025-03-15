@@ -1,17 +1,13 @@
+import { FC , useState, useEffect } from 'react';
 import Container from 'react-bootstrap/container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
-import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router';
+import ContentService from '../../services/content/ContentService';
 import lightning from 'bootstrap-icons/icons/lightning-charge-fill.svg';
-import { IContentService } from '../../services/content/ContentService';
-import { FC , useState, useEffect } from 'react';
 
-interface IAboutProps {
-  contentService: IContentService
-} 
-
-const About: FC<IAboutProps> = (props) => {
+const About: FC = () => {
 
   // useState and useEffect hooks may be overkill here 
   // but in a real-world app we'de be pulling the content from an external source 
@@ -19,8 +15,8 @@ const About: FC<IAboutProps> = (props) => {
   const [about, setAbout] = useState<string[]>([]);
 
   useEffect(() => {
-    return setAbout(props.contentService.getAbout());
-  }, [props.contentService]);
+    return setAbout(new ContentService().getAbout());
+  }, []);
 
   return (
     <Container className="px-4 py-5 my-5 text-center">
@@ -46,12 +42,11 @@ const About: FC<IAboutProps> = (props) => {
       </Row>
       <Row>
         <Col>
-          <Button variant="outline-secondary" className="btn-lg px-4 gap-3" href="/">Back</Button>
+          <Link className="btn btn-outline-secondary btn-lg px-4 gap-3" to="/">Back</Link>
         </Col>
       </Row>
     </Container>
   )
 };
 
-export type { IAboutProps };
-export default About ;
+export default About;

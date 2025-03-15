@@ -1,7 +1,8 @@
+import { FC } from 'react';
+import Container from 'react-bootstrap/container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import Container from 'react-bootstrap/container';
-import { FC } from 'react';
+import { Link } from 'react-router';
 
 const Header: FC = () => {
 
@@ -9,15 +10,15 @@ const Header: FC = () => {
     <header>
       <Navbar bg="primary" data-bs-theme="dark" expand="md">
         <Container fluid>
-          <Navbar.Brand href="/">CodeBlitz</Navbar.Brand>
+          <Navbar.Brand as={Link} to="/">CodeBlitz</Navbar.Brand>
           <Navbar.Toggle/>
           <Navbar.Collapse>
             <Nav className="ms-auto">
               <Nav.Item>
-                <Nav.Link href="/">Profile</Nav.Link>
+                <Nav.Link as={Link} to="/">Profile</Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link href="/about">About</Nav.Link>
+                <Nav.Link as={Link} to="/about">About</Nav.Link>
               </Nav.Item>
             </Nav>
           </Navbar.Collapse> 
@@ -25,6 +26,6 @@ const Header: FC = () => {
       </Navbar>
     </header>    
   )
-}
+};
 
-export default Header
+export default Header;

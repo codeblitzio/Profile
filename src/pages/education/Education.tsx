@@ -1,18 +1,14 @@
+import { FC, useState, useEffect } from 'react';
 import Container from 'react-bootstrap/container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
-import Button from 'react-bootstrap/Button';
 import ListGroup from 'react-bootstrap/ListGroup';
+import { Link } from 'react-router';
+import ContentService, { IEducation } from '../../services/content/ContentService';
 import lightning from 'bootstrap-icons/icons/lightning-charge-fill.svg';
-import { IContentService, IEducation } from '../../services/content/ContentService';
-import { FC, useState, useEffect } from 'react';
 
-interface IEducationProps {
-  contentService: IContentService
-}
-
-const Education: FC<IEducationProps> = (props) => {
+const Education: FC = () => {
 
   // useState and useEffect hooks may be overkill here 
   // but in a real-world app we'de be pulling the content from an external source 
@@ -20,8 +16,8 @@ const Education: FC<IEducationProps> = (props) => {
   const [education, setEducation] = useState<IEducation>({ qualifications: [], certifications: [] });
 
   useEffect(() => {
-    return setEducation(props.contentService.getEducation());
-  }, [props.contentService]);
+    return setEducation(new ContentService().getEducation());
+  }, []);
 
   return (
     <Container className="px-4 py-5 my-5 text-center">
@@ -71,12 +67,11 @@ const Education: FC<IEducationProps> = (props) => {
       </Row>
       <Row>
         <Col>
-          <Button variant="outline-secondary" className="btn-lg px-4 gap-3" href="/">Back</Button>
+          <Link className="btn btn-outline-secondary btn-lg px-4 gap-3" to="/">Back</Link>
         </Col>
       </Row>
     </Container>
   )
 };
 
-export type { IEducationProps }
 export default Education;

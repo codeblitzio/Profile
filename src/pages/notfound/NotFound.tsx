@@ -1,9 +1,9 @@
+import { FC } from 'react';
 import Container from 'react-bootstrap/container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import lightning from 'bootstrap-icons/icons/lightning-charge-fill.svg';
-import { FC } from 'react';
 
 const NotFound: FC = () => {
 

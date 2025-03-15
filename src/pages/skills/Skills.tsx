@@ -1,18 +1,14 @@
+import { FC, useState, useEffect } from 'react';
 import Container from 'react-bootstrap/container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
-import Button from 'react-bootstrap/Button';
 import ListGroup from 'react-bootstrap/ListGroup';
+import { Link } from 'react-router';
+import ContentService from '../../services/content/ContentService';
 import lightning from 'bootstrap-icons/icons/lightning-charge-fill.svg';
-import { IContentService } from '../../services/content/ContentService';
-import { FC, useState, useEffect } from 'react';
 
-interface ISkillsProps {
-  contentService: IContentService
-} 
-
-const Skills: FC<ISkillsProps> = (props) => {
+const Skills: FC = () => {
 
   // useState and useEffect hooks may be overkill here 
   // but in a real-world app we'de be pulling the content from an external source 
@@ -20,8 +16,8 @@ const Skills: FC<ISkillsProps> = (props) => {
   const [skills, setSkills] = useState<string[]>([]);
 
   useEffect(() => {
-    return setSkills(props.contentService.getSkills());
-  }, [props.contentService]);
+    return setSkills(new ContentService().getSkills());
+  }, []);
 
   return (
     <Container className="px-4 py-5 my-5 text-center">
@@ -49,12 +45,11 @@ const Skills: FC<ISkillsProps> = (props) => {
       </Row>
       <Row>
         <Col>
-          <Button variant="outline-secondary" className="btn-lg px-4 gap-3" href="/">Back</Button>
+          <Link className="btn btn-outline-secondary btn-lg px-4 gap-3" to="/">Back</Link>
         </Col>
       </Row>
     </Container>
   )
 };
 
-export type { ISkillsProps };
 export default Skills;

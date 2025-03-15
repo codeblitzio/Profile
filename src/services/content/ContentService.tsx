@@ -42,7 +42,7 @@ interface IContentService {
     getSocials(): ISocials;
 
     getAbout(): string[];
-}
+};
 
 class ContentService implements IContentService{
 
@@ -73,7 +73,7 @@ class ContentService implements IContentService{
     getAbout(): string[] {
         return (json as IContent).about;    
     }
-}
+};
 
-export default ContentService;
 export type { IContent, ISocials, IEducation, IHistory, IContentService };
+export default ContentService;
