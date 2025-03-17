@@ -40,8 +40,8 @@ const History: FC = () => {
                   <Accordion.Item key={index} eventKey={index.toString()}>
                     <Accordion.Header>{item.company}</Accordion.Header>
                     <Accordion.Body>
-                      <p><u>{item.title} ({item.start} - {item.end})</u></p>
-                      <p>{item.description}</p>
+                      <p className="text-start"><u>{item.title} ({item.start} - {item.end})</u></p>
+                      <p className="text-start">{item.description}</p>
                     </Accordion.Body>
                   </Accordion.Item>
                 )})

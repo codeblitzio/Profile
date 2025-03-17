@@ -40,7 +40,7 @@ const Profile: FC = () => {
           {
             summary.map((item, index) => {
               return (
-                <p key={index} className="">{item}</p>
+                <p key={index}>{item}</p>
               )})
           }
         </Col>
