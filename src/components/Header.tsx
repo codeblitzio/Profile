@@ -15,7 +15,10 @@ const Header: FC = () => {
           <Navbar.Collapse>
             <Nav className="ms-auto">
               <Nav.Item>
-                <Nav.Link as={Link} to="/">Profile</Nav.Link>
+                <Nav.Link as={Link} to="/">Home</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link as={Link} to="/profile">Profile</Nav.Link>
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link as={Link} to="/about">About</Nav.Link>

@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import { Link } from 'react-router';
 import ContentService  from '../../services/content/ContentService';
-import icon from 'bootstrap-icons/icons/terminal-fill.svg';
+import icon from 'bootstrap-icons/icons/person-lines-fill.svg';
 
 const Profile: FC = () => {
 
@@ -27,14 +27,14 @@ const Profile: FC = () => {
       </Row>
       <Row>
         <Col>
-          <h2 className="text-success mb-4">Blair Morris</h2>
+          <h2 className="text-success mb-4">Profile</h2>
         </Col>
        </Row>
-      <Row>
+       <Row>
         <Col>
-          <h4 className="text-secondary mb-4">Software Engineer</h4>
+          <h4 className="text-secondary mb-4">Summary</h4>
         </Col>
-      </Row>
+      </Row> 
       <Row>
         <Col lg={6} md={8} sm={10} xs={10} className="mb-4 mx-auto">
           {
@@ -47,9 +47,9 @@ const Profile: FC = () => {
       </Row>
       <Row>
         <Col className="d-grid gap-3 d-sm-flex justify-content-sm-center">
-          <Link className="btn btn-outline-secondary btn-lg px-4" to="/education">Education</Link>
-          <Link className="btn btn-outline-secondary btn-lg px-4" to="/skills">Skills</Link>
-          <Link className="btn btn-outline-secondary btn-lg px-4" to="/history">History</Link>
+          <Link className="btn btn-outline-secondary btn-lg px-4" to="/profile/education">Education</Link>
+          <Link className="btn btn-outline-secondary btn-lg px-4" to="/profile/skills">Skills</Link>
+          <Link className="btn btn-outline-secondary btn-lg px-4" to="/profile/history">History</Link>
         </Col>
       </Row>
     </Container>

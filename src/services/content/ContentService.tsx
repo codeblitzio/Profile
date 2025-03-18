@@ -19,6 +19,7 @@ interface ISocials {
 };
 
 interface IContent {
+    intro: string[],
     summary: string[],
     education: IEducation,
     skills: string[],
@@ -30,6 +31,8 @@ interface IContent {
 interface IContentService {
     
     getContent(): IContent;
+
+    getIntro(): string[];
 
     getSummary(): string[];
 
@@ -48,6 +51,10 @@ class ContentService implements IContentService{
 
     getContent(): IContent {
         return json as IContent;    
+    }
+
+    getIntro(): string[] {
+        return (json as IContent).intro;    
     }
 
     getSummary(): string[] {

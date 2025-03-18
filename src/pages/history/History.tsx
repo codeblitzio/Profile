@@ -51,7 +51,7 @@ const History: FC = () => {
       </Row>
       <Row>
         <Col>
-          <Link className="btn btn-outline-secondary btn-lg px-4 gap-3" to="/">Back</Link>
+          <Link className="btn btn-outline-secondary btn-lg px-4 gap-3" to="/profile">Back</Link>
         </Col>
       </Row>
     </Container>

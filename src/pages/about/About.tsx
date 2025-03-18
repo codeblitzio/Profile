@@ -3,7 +3,6 @@ import Container from 'react-bootstrap/container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
-import { Link } from 'react-router';
 import ContentService from '../../services/content/ContentService';
 import icon from 'bootstrap-icons/icons/info-square-fill.svg';
 
@@ -31,18 +30,13 @@ const About: FC = () => {
         </Col>
        </Row>
        <Row>
-        <Col lg={6} md={8} sm={10} xs={10} className="mb-4 mx-auto">
+        <Col lg={6} md={8} sm={10} xs={10} className="mx-auto">
           {
             about.map((item, index) => {
               return (
                 <p key={index} className="">{item}</p>
               )})
           }
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <Link className="btn btn-outline-secondary btn-lg px-4 gap-3" to="/">Back</Link>
         </Col>
       </Row>
     </Container>
