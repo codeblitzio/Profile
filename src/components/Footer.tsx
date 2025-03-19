@@ -25,14 +25,14 @@ const Footer: FC = () => {
       <Container>
         <Row className="justify-content-between align-items-center py-3 my-4 border-top">
           <Col className="align-items-center">
-            <Link to="/" className="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+            <Link to="/" className="mb-3 me-2 mb-md-0 lh-1">
               <Image className="bi" width="24" height="24" src={lightning} alt=""/>
             </Link>
             <span className="mb-3 mb-md-0 text-body-secondary">&copy; 2025 CodeBlitz</span>
           </Col>
           <Col className="nav col-md-4 justify-content-end list-unstyled">
-            <li className="ms-3"><a className="text-body-secondary" href={socials.linkedInUrl} target="_blank"><Image className="bi" width="24" height="24" src={linkedIn} alt="LinkedIn" /></a></li>
-            <li className="ms-3"><a className="text-body-secondary" href={socials.twitterUrl} target="_blank"><Image className="bi" width="24" height="24" src={twitterX} alt="X"/></a></li>
+            <li className="ms-3"><a href={socials.linkedInUrl} target="_blank"><Image className="bi" width="24" height="24" src={linkedIn} alt="LinkedIn" /></a></li>
+            <li className="ms-3"><a href={socials.twitterUrl} target="_blank"><Image className="bi" width="24" height="24" src={twitterX} alt="X"/></a></li>
           </Col>
         </Row>
       </Container>
