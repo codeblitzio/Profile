@@ -1,0 +1,9 @@
+{
+    "showcases": [
+		{
+			"title": "Weather",
+			"description": "This showcase demonstrates fetching the current weather for a selected city from the Open Weather API.",
+			"link": "/showcase/weather"
+		}
+	]
+}
