@@ -34,6 +34,7 @@ const Weather: FC = () => {
 	}, [location]);
 
 	const onChangeLocation = async (event: React.ChangeEvent<HTMLSelectElement>) => {
+		setWeather(undefined);
 		setLocation(event.target.value);
 	};
 
@@ -61,7 +62,7 @@ const Weather: FC = () => {
 				</Col>
 			</Row>
 			<Row>
-				<Col lg={4} md={6} sm={8} xs={8} className="mx-auto">
+				<Col lg={4} md={6} sm={8} xs={8} className="mx-auto mb-5">
 					<Form className="text-start">
 						<Form.Group className="mb-3" controlId="form.Select">
 							<Form.Label>Select location</Form.Label>	
@@ -73,21 +74,21 @@ const Weather: FC = () => {
 								}
 							</Form.Select>
 						</Form.Group>
-						<Form.Group controlId="form.Location" className="mb-3">
-							<Form.Label>Location</Form.Label>
-							<Form.Control type="text" readOnly disabled placeholder={weather?.location}/>
-						</Form.Group>
 						<Form.Group controlId="form.Conditions" className="mb-3">
 							<Form.Label>Conditions</Form.Label>
 							<Form.Control type="text" readOnly disabled placeholder={weather?.conditions}/>
 						</Form.Group>
 						<Form.Group controlId="form.Temperature" className="mb-3">
 							<Form.Label>Temperature</Form.Label>
-							<Form.Control type="text" readOnly disabled placeholder={weather?.temp.toString()}/>
+							<Form.Control type="text" readOnly disabled placeholder={weather?.temp.toFixed(1)}/>
 						</Form.Group>
-						<Form.Group controlId="form.Humidity" className="mb-5">
+						<Form.Group controlId="form.Humidity" className="mb-3">
 							<Form.Label>Humidity</Form.Label>
 							<Form.Control type="text" readOnly disabled placeholder={weather?.humidity.toString()}/>
+						</Form.Group>
+						<Form.Group controlId="form.Wind" >
+							<Form.Label>Wind</Form.Label>
+							<Form.Control type="text" readOnly disabled placeholder={weather?.wind.toFixed(1)}/>
 						</Form.Group>
 					</Form>
 				</Col>
