@@ -4,14 +4,20 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Image from 'react-bootstrap/Image';
+import Alert from 'react-bootstrap/Alert';
 import { Link } from 'react-router';
 import WeatherService, { IWeather } from './WeatherService';
 import json from "./content.json";
 import icon from 'bootstrap-icons/icons/cloud-sun-fill.svg';
 
+interface ILocation {
+	key: string;
+	name: string
+}
+
 interface IContent {
 	description: string[],
-	locations: string[],
+	locations: ILocation[],
 	defaultLocation: string
 }
 
@@ -26,14 +32,27 @@ const Weather: FC = () => {
 
 	const [weather, setWeather] = useState<IWeather>();
 
+	const [error, setError] = useState<boolean>(false);
+
 	useEffect(() => {
+
 	  const getWeather = async () => {
-			setWeather(await new WeatherService().getWeather(location));
+		const result = await new WeatherService().getWeather(location);
+		if (result) {
+			setWeather(result);
+			setError(false);
+		} else {
+			setWeather(undefined);
+			setError(true);
+		}
 	  };
+
 	  getWeather();
+	  
 	}, [location]);
 
 	const onChangeLocation = async (event: React.ChangeEvent<HTMLSelectElement>) => {
+		setError(false);
 		setWeather(undefined);
 		setLocation(event.target.value);
 	};
@@ -69,10 +88,13 @@ const Weather: FC = () => {
 							<Form.Select defaultValue={defaultLocation} onChange={onChangeLocation}>
 								{
 									locations.map((item, index) => {
-										return <option key={index} value={item}>{item}</option>
+										return <option key={index} value={item.key}>{item.name}</option>
 									})
 								}
 							</Form.Select>
+							<div>
+								{ error ? <Alert className="mt-4" variant="danger">An error occurred</Alert> : <></> }
+							</div>
 						</Form.Group>
 						<Form.Group controlId="form.Conditions" className="mb-3">
 							<Form.Label>Conditions</Form.Label>

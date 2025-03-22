@@ -28,30 +28,42 @@ interface IWeather {
 }
 
 interface IWeatherService {
-  getWeather(location: string): Promise<IWeather>;
+  getWeather(location: string): Promise<IWeather | undefined>;
 }
 
 class WeatherService implements IWeatherService {
 
-  getWeather = async (location: string): Promise<IWeather> => {
+  private BASE_URL = "https://api.openweathermap.org/";
 
-    location = `${location},au`;
+  getWeather = async (location: string): Promise<IWeather | undefined> => {
 
-    const apiKey = process.env.OPEN_WEATHER_MAP_API_KEY;
+    try {
+      const apiKey = process.env.OPEN_WEATHER_MAP_API_KEY;
 
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${apiKey}`;
+      const apiClient = axios.create({
+        baseURL: this.BASE_URL,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
 
-    const response = await axios.get<IOpenWeatherResponse>(url);
+      const qry = `data/2.5/weather?q=${location}&units=metric&appid=${apiKey}`;
 
-    return {
-      location: response.data.name,
-      conditions: response.data.weather[0].main,
-      temp: response.data.main.temp,
-      humidity: response.data.main.humidity,
-      wind: response.data.wind.speed
+      const response = await apiClient.get<IOpenWeatherResponse>(qry);
+
+      return {
+        location: response.data.name,
+        conditions: response.data.weather[0].main,
+        temp: response.data.main.temp,
+        humidity: response.data.main.humidity,
+        wind: response.data.wind.speed
+      };
+
+    } 
+    catch {
+      return undefined;
     };
-  };
-
+  }
 }
 
 export type { IWeatherService, IWeather };
