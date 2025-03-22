@@ -1,22 +1,15 @@
-import { FC, useState, useEffect } from 'react';
+import { FC } from 'react';
 import Container from 'react-bootstrap/container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import { Link } from 'react-router';
-import ContentService  from '../../services/content/ContentService';
+import json from "./content.json";
 import jpeg from '../../assets/profile.jpeg';
 
 const Home: FC = () => {
 
-  // useState and useEffect hooks may be overkill here 
-  // in a real-world scenario content would be pulled from an external source 
-
-  const [intro, setIntro] = useState<string[]>([]);
-
-  useEffect(() => {
-    return setIntro(new ContentService().getIntro());
-  }, []);
+  const intro: string[] = json.intro;
 
   return (
     <Container className="px-4 py-5 my-5 text-center">

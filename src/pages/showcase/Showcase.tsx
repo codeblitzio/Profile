@@ -14,14 +14,9 @@ interface IShowcase {
 	link: string
 };
 
-interface IContent {
-  showcases: IShowcase[]
-}
-
 const Showcase: FC = () => {
 
-  const content: IContent = json;
-  const showcases: IShowcase[] = content.showcases;
+  const showcases: IShowcase[] = json.showcases;
 
   return (
     <Container className="px-4 py-5 my-5 text-center">

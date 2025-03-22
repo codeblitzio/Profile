@@ -1,23 +1,21 @@
-import { FC, useState, useEffect } from 'react';
+import { FC } from 'react';
 import Container from 'react-bootstrap/container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { Link } from 'react-router';
-import ContentService, { IEducation } from '../../services/content/ContentService';
+import json from "./content.json";
 import icon from 'bootstrap-icons/icons/mortarboard-fill.svg';
+
+interface IEducation{
+  qualifications: string[],
+  certifications: string[]
+};
 
 const Education: FC = () => {
 
-  // useState and useEffect hooks may be overkill here 
-  // but in a real-world app we'de be pulling the content from an external source 
-
-  const [education, setEducation] = useState<IEducation>({ qualifications: [], certifications: [] });
-
-  useEffect(() => {
-    return setEducation(new ContentService().getEducation());
-  }, []);
+  const education: IEducation = json.education;
 
   return (
     <Container className="px-4 py-5 my-5 text-center">

@@ -24,11 +24,8 @@ interface IContent {
 const Weather: FC = () => {
 
 	const content: IContent = json;
-	const description = content.description;
-	const locations = content.locations;
-	const defaultLocation = content.defaultLocation;
 
-	const [location, setLocation] = useState<string>(defaultLocation);
+	const [location, setLocation] = useState<string>(content.defaultLocation);
 
 	const [weather, setWeather] = useState<IWeather>();
 
@@ -72,7 +69,7 @@ const Weather: FC = () => {
 			<Row>
 				<Col lg={6} md={8} sm={10} xs={10} className="mb-4 mx-auto">
 					{
-						description.map((item, index) => {
+						content.description.map((item, index) => {
 							return (
 								<p key={index} className="">{item}</p>
 							)
@@ -85,9 +82,9 @@ const Weather: FC = () => {
 					<Form className="text-start">
 						<Form.Group className="mb-3" controlId="form.Select">
 							<Form.Label>Select location</Form.Label>	
-							<Form.Select defaultValue={defaultLocation} onChange={onChangeLocation}>
+							<Form.Select defaultValue={content.defaultLocation} onChange={onChangeLocation}>
 								{
-									locations.map((item, index) => {
+									content.locations.map((item, index) => {
 										return <option key={index} value={item.key}>{item.name}</option>
 									})
 								}
