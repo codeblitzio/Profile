@@ -89,9 +89,7 @@ const Weather: FC = () => {
 									})
 								}
 							</Form.Select>
-							<div>
-								{ error ? <Alert className="mt-4" variant="danger">An error occurred</Alert> : <></> }
-							</div>
+							<Alert className="mt-4" show={error} variant="danger">An error occurred</Alert>
 						</Form.Group>
 						<Form.Group controlId="form.Conditions" className="mb-3">
 							<Form.Label>Conditions</Form.Label>
