@@ -111,10 +111,10 @@ const Weather: FC = () => {
 				</Col>
 			</Row>
 			<Row>
-        <Col>
-          <Link className="btn btn-outline-secondary btn-lg px-4" to="/showcase">Back</Link>
-        </Col>
-      </Row>
+				<Col>
+					<Link className="btn btn-outline-secondary btn-lg px-4" to="/showcase">Back</Link>
+				</Col>
+			</Row>
 		</Container>
 	)
 };

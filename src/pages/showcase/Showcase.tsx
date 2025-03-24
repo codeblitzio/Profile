@@ -32,7 +32,7 @@ const Showcase: FC = () => {
       </Row>
       <Row>
         <Col lg={6} md={8} sm={10} xs={10} className="mx-auto">
-          <Accordion defaultActiveKey="0" className="mb-4">
+          <Accordion className="mb-4">
             {
               showcases.map((item, index) => {
                 return (

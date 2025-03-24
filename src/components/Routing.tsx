@@ -7,6 +7,7 @@ import Skills from '../pages/profile/skills/Skills';
 import History from '../pages/profile/history/History';
 import Showcase from '../pages/showcase/Showcase';
 import Weather from '../pages/showcase/weather/Weather';
+import Footy from '../pages/showcase/footy/Footy';
 import About from '../pages/about/About';
 import NotFound from '../pages/notfound/NotFound';
 
@@ -21,6 +22,7 @@ const Routing: FC = () => {
       <Route path="/profile/history" element={<History/>}/>
       <Route path="/showcase" element={<Showcase/>}/>
       <Route path="/showcase/weather" element={<Weather/>}/>
+      <Route path="/showcase/footy" element={<Footy/>}/>
       <Route path="/about" element={<About/>}/>
       <Route path="*" element={<NotFound/>}/>
     </Routes>

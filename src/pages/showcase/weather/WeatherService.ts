@@ -60,7 +60,8 @@ class WeatherService implements IWeatherService {
       };
 
     } 
-    catch {
+    catch (error) {
+      console.error(error);
       return undefined;
     };
   }

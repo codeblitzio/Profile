@@ -4,6 +4,11 @@
 			"title": "Weather",
 			"description": "This showcase demonstrates fetching the current weather for a selected location from the Open Weather Map API.",
 			"link": "/showcase/weather"
+		},
+		{
+			"title": "Footy",
+			"description": "This showcase demonstrates fetching of statistics for the current AFL season. Data is sourced from the Squiggle API.",
+			"link": "/showcase/footy"
 		}
 	]
 }
