@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { useState } from 'react';
 import Container from 'react-bootstrap/container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -8,7 +8,7 @@ import Alert from 'react-bootstrap/Alert';
 import { Link } from 'react-router';
 import Standings from './Standings';
 import Games from './Games';
-import json from "./content.json";
+import json from "./footy.json";
 import icon from 'bootstrap-icons/icons/trophy-fill.svg';
 
 interface IRound {
@@ -32,7 +32,7 @@ interface IContent {
 	year: number
 }
 
-const Footy: FC = () => {
+function Footy() {
 
 	const content: IContent = json;
 

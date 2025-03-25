@@ -1,11 +1,10 @@
-import { FC } from 'react';
 import Container from 'react-bootstrap/container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import icon from 'bootstrap-icons/icons/x-octagon-fill.svg';
 
-const NotFound: FC = () => {
+function NotFound() {
 
   const text = "The requested resource could not be found.";
 

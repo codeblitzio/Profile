@@ -1,13 +1,12 @@
-import { FC } from 'react';
 import Container from 'react-bootstrap/container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import { Link } from 'react-router';
-import json from "./content.json";
+import json from "./profile.json";
 import icon from 'bootstrap-icons/icons/person-lines-fill.svg';
 
-const Profile: FC = () => {
+function Profile() {
 
   const summary: string[] = json.summary;
 

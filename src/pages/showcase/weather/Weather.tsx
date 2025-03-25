@@ -1,4 +1,4 @@
-import { FC, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -7,7 +7,7 @@ import Image from 'react-bootstrap/Image';
 import Alert from 'react-bootstrap/Alert';
 import { Link } from 'react-router';
 import WeatherService, { IWeather } from './WeatherService';
-import json from "./content.json";
+import json from "./weather.json";
 import icon from 'bootstrap-icons/icons/cloud-sun-fill.svg';
 
 interface ILocation {
@@ -21,7 +21,7 @@ interface IContent {
 	defaultLocation: string
 }
 
-const Weather: FC = () => {
+function Weather() {
 
 	const content: IContent = json;
 

@@ -1,17 +1,17 @@
-import { FC } from 'react';
 import Container from 'react-bootstrap/container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
-import { Link } from 'react-router'
+import { Link } from 'react-router';
+import json from "./footer.json";
 import lightning from 'bootstrap-icons/icons/lightning-charge-fill.svg';
 import linkedIn from 'bootstrap-icons/icons/linkedin.svg';
 import twitterX from 'bootstrap-icons/icons/twitter-x.svg';
 
-const Footer: FC = () => {
+function Footer() {
 
-  const linkedInUrl = "https://www.linkedin.com/in/blairmorris";
-  const twitterUrl = "https://twitter.com/codeblitzio";
+  const linkedInUrl = json.linkedInUrl;
+  const twitterUrl = json.twitterUrl;
 
   return (
     <footer>

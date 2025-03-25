@@ -1,11 +1,10 @@
-import { FC } from 'react';
 import Container from 'react-bootstrap/container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import Accordion from 'react-bootstrap/Accordion';
 import { Link } from 'react-router'
-import json from "./content.json";
+import json from "./history.json";
 import icon from 'bootstrap-icons/icons/briefcase-fill.svg';
 
 interface IHistory{
@@ -16,7 +15,7 @@ interface IHistory{
   description: string
 };
 
-const History: FC = () => {
+function History() {
 
   const history: IHistory[] = json.history;
 

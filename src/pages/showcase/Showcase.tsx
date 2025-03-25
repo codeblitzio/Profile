@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import Accordion from 'react-bootstrap/Accordion';
 import { Link } from 'react-router';
-import json from "./content.json";
+import json from "./showcase.json";
 import icon from 'bootstrap-icons/icons/film.svg';
 
 interface IShowcase {

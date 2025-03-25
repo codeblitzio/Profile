@@ -1,14 +1,13 @@
-import { FC } from 'react';
 import Container from 'react-bootstrap/container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { Link } from 'react-router';
-import json from "./content.json";
+import json from "./skills.json";
 import icon from 'bootstrap-icons/icons/tools.svg';
 
-const Skills: FC = () => {
+function Skills() {
 
   const skills: string[] = json.skills
 

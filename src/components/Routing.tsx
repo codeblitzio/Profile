@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import { Routes, Route } from 'react-router';
 import Home from '../pages/home/Home';
 import Profile from '../pages/profile/Profile';
@@ -11,7 +10,7 @@ import Footy from '../pages/showcase/footy/Footy';
 import About from '../pages/about/About';
 import NotFound from '../pages/notfound/NotFound';
 
-const Routing: FC = () => {
+function Routing() {
 
   return (
     <Routes>

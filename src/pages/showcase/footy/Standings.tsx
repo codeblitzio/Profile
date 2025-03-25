@@ -1,4 +1,4 @@
-import { FC, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Table from 'react-bootstrap/Table';
 import FootyService, { IStanding } from './FootyService';
 
@@ -6,7 +6,7 @@ interface IStandingsProps {
     setError: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Standings: FC<IStandingsProps> = (props) => {
+function Standings({ setError }: IStandingsProps) {
 
 	const [standings, setStandings] = useState<IStanding[]>([]);
 
@@ -15,14 +15,14 @@ const Standings: FC<IStandingsProps> = (props) => {
 		const result = await new FootyService().getStandings();
 		if (result) {
 			setStandings(result);
-			props.setError(false);
+			setError(false);
 		} else {
 			setStandings([]);
-			props.setError(true);
+			setError(true);
 		}
 	  };
 	  getStandings();
-	}, [props]);
+	}, [setError]);
 
 	return (
         <Table bordered striped hover>

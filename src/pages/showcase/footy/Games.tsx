@@ -1,4 +1,4 @@
-import { FC, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Table from 'react-bootstrap/Table';
 import FootyService, { IGame } from './FootyService';
 
@@ -9,7 +9,7 @@ interface IGamesProps {
     setError: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Games: FC<IGamesProps> = (props) => {
+function Games({ year, round, team, setError }:IGamesProps ) {
 
 	const [games, setGames] = useState<IGame[]>([]);
 
@@ -19,30 +19,30 @@ const Games: FC<IGamesProps> = (props) => {
 
         let result: IGame[] | undefined;
 
-        if (props.team > 0) {
-            result = await new FootyService().getGamesByTeam(props.year, props.team);
+        if (team > 0) {
+            result = await new FootyService().getGamesByTeam(year, team);
         }
         else {
-            result = await new FootyService().getGamesByRound(props.year, props.round);
+            result = await new FootyService().getGamesByRound(year, round);
         }
 
 		if (result) {
 			setGames(result);
-			props.setError(false);
+			setError(false);
 		} else {
 			setGames([]);
-			props.setError(true);
+			setError(true);
 		}
 	  };
 
 	  getGames();
 
-	}, [props]);
+	}, [year, round, team, setError]);
 
 	return (
         <Table bordered striped hover>
             <thead>
-                { props.team > 0 && <th>Round</th> }
+                { team > 0 && <th>Round</th> }
                 <th>Home</th>
                 <th>Away</th>
                 <th>Score</th>
@@ -50,7 +50,7 @@ const Games: FC<IGamesProps> = (props) => {
             <tbody>
                 {games.map((game, index) => (
                     <tr key={index}>
-                        { props.team > 0 && <td>{game.roundname}</td> }
+                        { team > 0 && <td>{game.roundname}</td> }
                         <td>{game.hteam}</td>
                         <td>{game.ateam}</td>
                         <td>{game.complete == 100 && game.hscore + " - " + game.ascore}</td>

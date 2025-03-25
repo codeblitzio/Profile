@@ -1,11 +1,10 @@
-import { FC } from 'react';
 import Container from 'react-bootstrap/container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { Link } from 'react-router';
-import json from "./content.json";
+import json from "./education.json";
 import icon from 'bootstrap-icons/icons/mortarboard-fill.svg';
 
 interface IEducation{
@@ -13,7 +12,7 @@ interface IEducation{
   certifications: string[]
 };
 
-const Education: FC = () => {
+function Education() {
 
   const education: IEducation = json.education;
 
