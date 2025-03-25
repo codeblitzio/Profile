@@ -70,7 +70,7 @@ class FootyService implements IFootyService {
         },
       });
 
-      const qry = "?q=games&year=" + year + "&round=" + round;
+      const qry = `?q=games&year=${year}&round=${round}`;
       const response = await apiClient.get<IGamesResponse>(qry);
       return response.data.games;
     } 
@@ -89,7 +89,7 @@ class FootyService implements IFootyService {
         },
       });
 
-      const qry = "?q=games&year=" + year + "&team=" + team;
+      const qry = `?q=games&year=${year}&team=${team}`;
       const response = await apiClient.get<IGamesResponse>(qry);
       return response.data.games;
     } 

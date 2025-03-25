@@ -129,27 +129,22 @@ const Footy: FC = () => {
 					</Form>
 				</Col>
 			</Row>
-			{ view == "Ladder" && !error &&
-				<Row>
-					<Col lg={8} md={8} sm={10} xs={10} className="mb-4 mx-auto">
+			<Row>
+				<Col lg={8} md={10} sm={12} xs={12} className="mb-4 mx-auto">
+					{ 
+						view == "Ladder" && !error &&
 						<Standings setError={setError} />
-					</Col>
-				</Row>
-			}
-			{ view == "Round" && round >=0 && !error &&
-				<Row>
-					<Col lg={8} md={8} sm={10} xs={10} className="mb-4 mx-auto">
+					}
+					{ 
+						view == "Round" && round >=0 && !error &&
 						<Games year={content.year} round={round} team={content.defaultTeam} setError={setError} />
-					</Col>
-				</Row>
-			}
-			{ view == "Team" && team > 0 && !error &&
-				<Row>
-					<Col lg={8} md={8} sm={10} xs={10} className="mb-4 mx-auto">
+					}
+					{
+						view == "Team" && team > 0 && !error &&
 						<Games year={content.year} round={content.defaultRound} team={team} setError={setError} />
-					</Col>
-				</Row>
-			}
+					}
+				</Col>
+			</Row>
             <Row>
                 <Col>
                     <Link className="btn btn-outline-secondary btn-lg px-4" to="/showcase">Back</Link>

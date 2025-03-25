@@ -53,7 +53,7 @@ const Games: FC<IGamesProps> = (props) => {
                         { props.team > 0 && <td>{game.roundname}</td> }
                         <td>{game.hteam}</td>
                         <td>{game.ateam}</td>
-                        <td>{game.complete == 100 ? game.hscore + " - " + game.ascore: ""}</td>
+                        <td>{game.complete == 100 && game.hscore + " - " + game.ascore}</td>
                     </tr>
                 ))}
             </tbody> 
