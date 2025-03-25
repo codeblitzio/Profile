@@ -6,7 +6,8 @@ import Form from 'react-bootstrap/Form';
 import Image from 'react-bootstrap/Image';
 import Alert from 'react-bootstrap/Alert';
 import { Link } from 'react-router';
-import Ladder from './Ladder';
+import Standings from './Standings';
+import Games from './Games';
 import json from "./content.json";
 import icon from 'bootstrap-icons/icons/trophy-fill.svg';
 
@@ -45,16 +46,20 @@ const Footy: FC = () => {
 
 	const onChangeView = (event: React.ChangeEvent<HTMLSelectElement>) => {
 		setError(false);
+		setRound(content.defaultRound);
+		setTeam(content.defaultTeam);
 		setView(event.target.value);
 	};
 
 	const onChangeRound = (event: React.ChangeEvent<HTMLSelectElement>) => {
 		setError(false);
+		setTeam(content.defaultTeam);
 		setRound(+event.target.value);
 	};
 
 	const onChangeTeam = (event: React.ChangeEvent<HTMLSelectElement>) => {
 		setError(false);
+		setRound(content.defaultRound);
 		setTeam(+event.target.value);
 	};
 
@@ -124,10 +129,24 @@ const Footy: FC = () => {
 					</Form>
 				</Col>
 			</Row>
-			{ view=="Ladder" && !error &&
+			{ view == "Ladder" && !error &&
 				<Row>
 					<Col lg={8} md={8} sm={10} xs={10} className="mb-4 mx-auto">
-						<Ladder setError={setError} />
+						<Standings setError={setError} />
+					</Col>
+				</Row>
+			}
+			{ view == "Round" && round >=0 && !error &&
+				<Row>
+					<Col lg={8} md={8} sm={10} xs={10} className="mb-4 mx-auto">
+						<Games year={content.year} round={round} team={content.defaultTeam} setError={setError} />
+					</Col>
+				</Row>
+			}
+			{ view == "Team" && team > 0 && !error &&
+				<Row>
+					<Col lg={8} md={8} sm={10} xs={10} className="mb-4 mx-auto">
+						<Games year={content.year} round={content.defaultRound} team={team} setError={setError} />
 					</Col>
 				</Row>
 			}

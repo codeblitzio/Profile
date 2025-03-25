@@ -12,19 +12,35 @@ interface IStanding {
   losses: number;
 }
 
-interface IStandingsResponse{
+interface IStandingsResponse {
   standings: IStanding[];
+}
+
+interface IGame {
+  round: number;
+  roundname: string;
+  hteam: string;
+  ateam: string;
+  venue: string;
+  date: string;
+  hscore: number;
+  ascore: number;
+  complete: number;
+}
+
+interface IGamesResponse {
+  games: IGame[];
 }
 
 interface IFootyService {
   getStandings(): Promise<IStanding[] | undefined>;
+  getGamesByRound(year: number, round: number): Promise<IGame[] | undefined>;
+  getGamesByTeam(year: number, team: number): Promise<IGame[] | undefined>;
 }
 
 class FootyService implements IFootyService {
 
   private BASE_URL = "https://api.squiggle.com.au/";
-
-  // private static standings: IStanding[] | undefined = undefined;
 
   getStandings = async (): Promise<IStanding[] | undefined> => {
     try {
@@ -44,7 +60,46 @@ class FootyService implements IFootyService {
       return undefined;
     } 
   }
+
+  getGamesByRound = async (year: number, round: number): Promise<IGame[] | undefined> => {
+    try {
+      const apiClient = axios.create({
+        baseURL: this.BASE_URL,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      const qry = "?q=games&year=" + year + "&round=" + round;
+      const response = await apiClient.get<IGamesResponse>(qry);
+      return response.data.games;
+    } 
+    catch (error){
+      console.error(error);
+      return undefined;
+    } 
+  }
+
+  getGamesByTeam = async (year: number, team: number): Promise<IGame[] | undefined> => {
+    try {
+      const apiClient = axios.create({
+        baseURL: this.BASE_URL,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      const qry = "?q=games&year=" + year + "&team=" + team;
+      const response = await apiClient.get<IGamesResponse>(qry);
+      return response.data.games;
+    } 
+    catch (error){
+      console.error(error);
+      return undefined;
+    } 
+  }
+
 }
 
-export type { IStanding };
+export type { IStanding, IGame };
 export default FootyService;

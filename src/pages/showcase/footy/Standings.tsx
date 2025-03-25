@@ -2,11 +2,11 @@ import { FC, useState, useEffect } from 'react';
 import Table from 'react-bootstrap/Table';
 import FootyService, { IStanding } from './FootyService';
 
-interface ILadderProps {
+interface IStandingsProps {
     setError: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Ladder: FC<ILadderProps> = (props) => {
+const Standings: FC<IStandingsProps> = (props) => {
 
 	const [standings, setStandings] = useState<IStanding[]>([]);
 
@@ -22,7 +22,7 @@ const Ladder: FC<ILadderProps> = (props) => {
 		}
 	  };
 	  getStandings();
-	}, []);
+	}, [props]);
 
 	return (
         <Table bordered striped hover>
@@ -46,5 +46,5 @@ const Ladder: FC<ILadderProps> = (props) => {
 	)
 };
 
-export type { ILadderProps }
-export default Ladder;
+export type { IStandingsProps }
+export default Standings;
