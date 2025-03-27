@@ -53,7 +53,7 @@ function Games({ year, round, team, setError }:IGamesProps ) {
                         { team > 0 && <td>{game.roundname}</td> }
                         <td>{game.hteam}</td>
                         <td>{game.ateam}</td>
-                        <td>{game.complete == 100 && game.hscore + " - " + game.ascore}</td>
+                        <td>{(game.hscore + game.ascore) > 0 && game.hscore + " - " + game.ascore}</td>
                     </tr>
                 ))}
             </tbody> 
