@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import Container from 'react-bootstrap/container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -14,7 +13,7 @@ interface IShowcase {
 	link: string
 };
 
-const Showcase: FC = () => {
+function Showcase() {
 
   const showcases: IShowcase[] = json.showcases;
 
