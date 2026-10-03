@@ -19,16 +19,16 @@ function Profile() {
       </Row>
       <Row>
         <Col>
-          <h2 className="text-success mb-4">Profile</h2>
+          <h2 className="text-primary mb-4">Profile</h2>
         </Col>
        </Row>
        <Row>
         <Col>
-          <h4 className="text-secondary mb-4">Summary</h4>
+          <h4 className="text-primary mb-4">Summary</h4>
         </Col>
       </Row> 
       <Row>
-        <Col lg={6} md={8} sm={10} xs={10} className="mb-4 mx-auto">
+        <Col lg={6} md={8} sm={10} xs={10} className="mb-4 mx-auto text-body">
           {
             summary.map((item, index) => {
               return (
@@ -39,9 +39,9 @@ function Profile() {
       </Row>
       <Row>
         <Col className="d-grid gap-3 d-sm-flex justify-content-sm-center">
-          <Link className="btn btn-outline-secondary btn-lg px-4" to="/profile/education">Education</Link>
-          <Link className="btn btn-outline-secondary btn-lg px-4" to="/profile/skills">Skills</Link>
-          <Link className="btn btn-outline-secondary btn-lg px-4" to="/profile/history">History</Link>
+          <Link className="btn btn-primary btn-lg px-4" to="/profile/education">Education</Link>
+          <Link className="btn btn-primary btn-lg px-4" to="/profile/skills">Skills</Link>
+          <Link className="btn btn-primary btn-lg px-4" to="/profile/history">History</Link>
         </Col>
       </Row>
     </Container>

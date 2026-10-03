@@ -7,7 +7,7 @@ function Header() {
 
   return (
     <header>
-      <Navbar bg="dark" data-bs-theme="dark" expand="md">
+      <Navbar bg="primary" data-bs-theme="dark" expand="md">
         <Container fluid>
           <Navbar.Brand as={Link} to="/">CodeBlitz</Navbar.Brand>
           <Navbar.Toggle/>
@@ -18,9 +18,6 @@ function Header() {
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link as={Link} to="/profile">Profile</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link as={Link} to="/showcase">Showcase</Nav.Link>
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link as={Link} to="/about">About</Nav.Link>

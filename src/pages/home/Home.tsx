@@ -19,16 +19,16 @@ function Home() {
       </Row>
       <Row>
         <Col>
-          <h2 className="text-success mb-4">Blair Morris</h2>
+          <h2 className="text-primary mb-4">Blair Morris</h2>
         </Col>
        </Row>
       <Row>
         <Col>
-          <h4 className="text-secondary mb-4">Software Engineer</h4>
+          <h4 className="text-primary mb-4">Software Engineer</h4>
         </Col>
       </Row>
       <Row>
-        <Col lg={6} md={8} sm={10} xs={10} className="mb-4 mx-auto">
+        <Col lg={6} md={8} sm={10} xs={10} className="mb-4 mx-auto text-body">
           {
             intro.map((item, index) => {
               return (
@@ -39,7 +39,7 @@ function Home() {
       </Row>
       <Row>
         <Col>
-          <Link className="btn btn-outline-secondary btn-lg px-4" to="/profile">Profile</Link>
+          <Link className="btn btn-primary btn-lg px-4" to="/profile">Profile</Link>
         </Col>
       </Row>
     </Container>

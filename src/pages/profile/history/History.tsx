@@ -28,11 +28,11 @@ function History() {
       </Row>
       <Row>
         <Col>
-          <h2 className="text-success mb-4">Career History</h2>
+          <h2 className="text-primary mb-4">Career History</h2>
         </Col>
        </Row>
       <Row>
-        <Col lg={6} md={8} sm={10} xs={10} className="mx-auto">
+        <Col lg={6} md={8} sm={10} xs={10} className="mx-auto text-body">
           <Accordion className="mb-4">
             {
               history.map((item, index) => {
@@ -51,7 +51,7 @@ function History() {
       </Row>
       <Row>
         <Col>
-          <Link className="btn btn-outline-secondary btn-lg px-4 gap-3" to="/profile">Back</Link>
+          <Link className="btn btn-primary btn-lg px-4 gap-3" to="/profile">Back</Link>
         </Col>
       </Row>
     </Container>

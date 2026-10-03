@@ -17,11 +17,11 @@ function NotFound() {
       </Row>
       <Row>
         <Col>
-          <h2 className="text-success mb-4">404 - Not Found</h2>
+          <h2 className="text-primary mb-4">404 - Not Found</h2>
         </Col>
        </Row>
        <Row>
-        <Col lg={6} md={8} sm={10} xs={10} className="mx-auto">
+        <Col lg={6} md={8} sm={10} xs={10} className="mx-auto text-body">
           <p>{text}</p>
         </Col>
       </Row>

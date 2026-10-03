@@ -25,16 +25,16 @@ function Education() {
       </Row>
       <Row>
         <Col>
-          <h2 className="text-success mb-4">Education</h2>
+          <h2 className="text-primary mb-4">Education</h2>
         </Col>
       </Row>
       <Row>
         <Col>
-          <h4 className="text-secondary mb-4">Qualifications</h4>
+          <h4 className="text-primary mb-4">Qualifications</h4>
         </Col>
       </Row>
       <Row>
-        <Col lg={6} md={8} sm={10} xs={10} className="mx-auto">
+        <Col lg={6} md={8} sm={10} xs={10} className="mx-auto text-body">
           <ListGroup className="mb-4">
             {
               education.qualifications.map((item, index) => {
@@ -47,11 +47,11 @@ function Education() {
       </Row>
       <Row>
         <Col>
-          <h4 className="text-secondary mb-4">Certifications</h4>
+          <h4 className="text-primary mb-4">Certifications</h4>
         </Col>
       </Row>
       <Row>
-        <Col lg={6} md={8} sm={10} xs={10} className="mx-auto">      
+        <Col lg={6} md={8} sm={10} xs={10} className="mx-auto text-body">
           <ListGroup className="mb-4">
             {
               education.certifications.map((item, index) => {
@@ -64,7 +64,7 @@ function Education() {
       </Row>
       <Row>
         <Col>
-          <Link className="btn btn-outline-secondary btn-lg px-4 gap-3" to="/profile">Back</Link>
+          <Link className="btn btn-primary btn-lg px-4 gap-3" to="/profile">Back</Link>
         </Col>
       </Row>
     </Container>
