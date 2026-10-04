@@ -2,6 +2,7 @@ import Container from 'react-bootstrap/container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
+import { Link } from 'react-router';
 import json from "./about.json";
 import icon from 'bootstrap-icons/icons/info-circle-fill.svg';
 
@@ -22,13 +23,18 @@ function About() {
         </Col>
        </Row>
        <Row>
-        <Col lg={6} md={8} sm={10} xs={10} className="mx-auto text-body-secondary">
+        <Col lg={6} md={8} sm={10} xs={10} className="mx-auto text-body-secondary mb-4">
           {
             about.map((item, index) => {
               return (
                 <p key={index} className="">{item}</p>
               )})
           }
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <Link className="btn btn-primary btn-lg px-4 gap-3" to="/profile">Back</Link>
         </Col>
       </Row>
     </Container>
