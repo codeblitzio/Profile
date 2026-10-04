@@ -24,11 +24,11 @@ function Profile() {
        </Row>
        <Row>
         <Col>
-          <h4 className="text-primary mb-4">Summary</h4>
+          <h4 className="text-body-secondary mb-4">Summary</h4>
         </Col>
       </Row> 
       <Row>
-        <Col lg={6} md={8} sm={10} xs={10} className="mb-4 mx-auto text-body">
+        <Col lg={6} md={8} sm={10} xs={10} className="mb-4 mx-auto text-body-secondary">
           {
             summary.map((item, index) => {
               return (

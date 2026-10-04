@@ -32,7 +32,7 @@ function History() {
         </Col>
        </Row>
       <Row>
-        <Col lg={6} md={8} sm={10} xs={10} className="mx-auto text-body">
+        <Col lg={6} md={8} sm={10} xs={10} className="mx-auto text-body-secondary">
           <Accordion className="mb-4">
             {
               history.map((item, index) => {

@@ -30,11 +30,11 @@ function Education() {
       </Row>
       <Row>
         <Col>
-          <h4 className="text-primary mb-4">Qualifications</h4>
+          <h4 className="text-body-secondary mb-4">Qualifications</h4>
         </Col>
       </Row>
       <Row>
-        <Col lg={6} md={8} sm={10} xs={10} className="mx-auto text-body">
+        <Col lg={6} md={8} sm={10} xs={10} className="mx-auto text-body-secondary">
           <ListGroup className="mb-4">
             {
               education.qualifications.map((item, index) => {
@@ -47,11 +47,11 @@ function Education() {
       </Row>
       <Row>
         <Col>
-          <h4 className="text-primary mb-4">Certifications</h4>
+          <h4 className="text-body-secondary mb-4">Certifications</h4>
         </Col>
       </Row>
       <Row>
-        <Col lg={6} md={8} sm={10} xs={10} className="mx-auto text-body">
+        <Col lg={6} md={8} sm={10} xs={10} className="mx-auto text-body-secondary">
           <ListGroup className="mb-4">
             {
               education.certifications.map((item, index) => {

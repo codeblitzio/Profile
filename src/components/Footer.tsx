@@ -1,4 +1,5 @@
 import Container from 'react-bootstrap/container';
+import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
@@ -21,7 +22,7 @@ function Footer() {
             <Link to="/" className="mb-3 me-2 mb-md-0 lh-1">
               <Image className="bi" width="24" height="24" src={lightning} alt=""/>
             </Link>
-            <Link to="/" className="mb-3 mb-md-0 text-primary text-decoration-none">&copy; 2026 CodeBlitz</Link>
+            <Button href="/" variant="link" className="mb-3 mb-md-0">&copy; 2026 CodeBlitz</Button>
           </Col>
           <Col className="nav col-md-4 justify-content-end list-unstyled">
             <li className="ms-3"><a href={linkedInUrl} target="_blank"><Image className="bi" width="24" height="24" src={linkedIn} alt="LinkedIn" /></a></li>

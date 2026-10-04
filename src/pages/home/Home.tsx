@@ -14,7 +14,7 @@ function Home() {
     <Container className="px-4 py-5 my-5 text-center">
       <Row>
         <Col lg={6} md={8} sm={10} xs={10} className="mb-4 mx-auto">
-          <Image fluid className="mb-4 border shadow" src={jpeg} alt=""/>
+          <Image fluid className="mb-4 border border-3 border-primary-subtle rounded-3 shadow-lg" src={jpeg} alt=""/>
         </Col>  
       </Row>
       <Row>
@@ -24,11 +24,11 @@ function Home() {
        </Row>
       <Row>
         <Col>
-          <h4 className="text-primary mb-4">Software Engineer</h4>
+          <h4 className="text-body-secondary mb-4">Software Engineer</h4>
         </Col>
       </Row>
       <Row>
-        <Col lg={6} md={8} sm={10} xs={10} className="mb-4 mx-auto text-body">
+        <Col lg={6} md={8} sm={10} xs={10} className="mb-4 mx-auto text-body-secondary">
           {
             intro.map((item, index) => {
               return (
