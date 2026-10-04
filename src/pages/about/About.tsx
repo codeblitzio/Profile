@@ -34,7 +34,7 @@ function About() {
       </Row>
       <Row>
         <Col>
-          <Link className="btn btn-primary btn-lg px-4 gap-3" to="/profile">Back</Link>
+          <Link className="btn btn-primary btn-lg px-4 gap-3" to="/">Back</Link>
         </Col>
       </Row>
     </Container>

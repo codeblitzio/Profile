@@ -1,6 +1,7 @@
 import Container from 'react-bootstrap/container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { Link } from 'react-router';
 import Image from 'react-bootstrap/Image';
 import icon from 'bootstrap-icons/icons/x-octagon-fill.svg';
 
@@ -21,8 +22,13 @@ function NotFound() {
         </Col>
        </Row>
        <Row>
-        <Col lg={6} md={8} sm={10} xs={10} className="mx-auto text-body-secondary">
+        <Col lg={6} md={8} sm={10} xs={10} className="mx-auto text-body-secondary mb-4">
           <p>{text}</p>
+        </Col>
+      </Row>
+            <Row>
+        <Col>
+          <Link className="btn btn-primary btn-lg px-4 gap-3" to="/">Back</Link>
         </Col>
       </Row>
     </Container>
