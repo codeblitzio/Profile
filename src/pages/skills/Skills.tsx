@@ -12,7 +12,7 @@ function Skills() {
   const skills: string[] = json.skills
 
   return (
-    <Container className="px-4 py-5 my-5 text-center">
+    <Container className="px-4 py-5 my-3 text-center">
       <Row>
         <Col>
           <Image className="mb-4" src={icon} alt="" width="50" height="50"/>
@@ -37,7 +37,7 @@ function Skills() {
       </Row>
       <Row>
         <Col>
-          <Link className="btn btn-primary btn-lg px-4 gap-3" to="/profile">Back</Link>
+          <Link className="btn btn-primary btn-lg px-4 gap-3" to="/">Back</Link>
         </Col>
       </Row>
     </Container>

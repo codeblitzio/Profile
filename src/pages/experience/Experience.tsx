@@ -4,10 +4,10 @@ import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import Accordion from 'react-bootstrap/Accordion';
 import { Link } from 'react-router'
-import json from "./history.json";
+import json from "./experience.json";
 import icon from 'bootstrap-icons/icons/briefcase-fill.svg';
 
-interface IHistory{
+interface IExperience{
   company: string,
   title: string,
   start: string,
@@ -15,12 +15,12 @@ interface IHistory{
   description: string
 };
 
-function History() {
+function Experience() {
 
-  const history: IHistory[] = json.history;
+  const experience: IExperience[] = json.experience;
 
   return (
-    <Container className="px-4 py-5 my-5 text-center">
+    <Container className="px-4 py-5 my-3 text-center">
       <Row>
         <Col>
           <Image className="mb-4" src={icon} alt="" width="50" height="50"/>
@@ -28,14 +28,14 @@ function History() {
       </Row>
       <Row>
         <Col>
-          <h2 className="text-primary mb-4">Career History</h2>
+          <h2 className="text-primary mb-4">Experience</h2>
         </Col>
        </Row>
       <Row>
         <Col lg={6} md={8} sm={10} xs={10} className="mx-auto text-body-secondary">
           <Accordion defaultActiveKey="0" className="mb-4">
             {
-              history.map((item, index) => {
+              experience.map((item, index) => {
                 return (
                   <Accordion.Item key={index} eventKey={index.toString()}>
                     <Accordion.Header>{item.company}</Accordion.Header>
@@ -51,11 +51,11 @@ function History() {
       </Row>
       <Row>
         <Col>
-          <Link className="btn btn-primary btn-lg px-4 gap-3" to="/profile">Back</Link>
+          <Link className="btn btn-primary btn-lg px-4 gap-3" to="/">Back</Link>
         </Col>
       </Row>
     </Container>
   )
 };
 
-export default History;
+export default Experience;

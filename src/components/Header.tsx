@@ -1,5 +1,6 @@
 import Container from 'react-bootstrap/container';
 import Nav from 'react-bootstrap/Nav';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router';
 
@@ -16,11 +17,13 @@ function Header() {
               <Nav.Item>
                 <Nav.Link as={Link} to="/">Home</Nav.Link>
               </Nav.Item>
+              <NavDropdown title="About" id="about-dropdown">
+                <NavDropdown.Item as={Link} to="/education">Education</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/skills">Skills</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/experience">Experience</NavDropdown.Item>
+              </NavDropdown>
               <Nav.Item>
-                <Nav.Link as={Link} to="/profile">Profile</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link as={Link} to="/about">About</Nav.Link>
+                <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
               </Nav.Item>
             </Nav>
           </Navbar.Collapse> 

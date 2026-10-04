@@ -1,10 +1,9 @@
 import { Routes, Route } from 'react-router';
 import Home from '../pages/home/Home';
-import Profile from '../pages/profile/Profile';
-import Education from '../pages/profile/education/Education';
-import Skills from '../pages/profile/skills/Skills';
-import History from '../pages/profile/history/History';
-import About from '../pages/about/About';
+import Education from '../pages/education/Education';
+import Skills from '../pages/skills/Skills';
+import Experience from '../pages/experience/Experience';
+import Contact from '../pages/contact/Contact';
 import NotFound from '../pages/notfound/NotFound';
 
 function Routing() {
@@ -12,11 +11,10 @@ function Routing() {
   return (
     <Routes>
       <Route path="/" element={<Home/>}/>
-      <Route path="/profile" element={<Profile/>}/>
-      <Route path="/profile/education" element={<Education/>}/>
-      <Route path="/profile/skills" element={<Skills/>}/>
-      <Route path="/profile/history" element={<History/>}/>
-      <Route path="/about" element={<About/>}/>
+      <Route path="/education" element={<Education/>}/>
+      <Route path="/skills" element={<Skills/>}/>
+      <Route path="/experience" element={<Experience/>}/>
+      <Route path="/contact" element={<Contact/>}/>
       <Route path="*" element={<NotFound/>}/>
     </Routes>
   )

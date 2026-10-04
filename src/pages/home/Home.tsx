@@ -8,10 +8,10 @@ import jpeg from '../../assets/profile.jpeg';
 
 function Home() {
 
-  const intro: string[] = json.intro;
+  const summary: string[] = json.summary;
 
   return (
-    <Container className="px-4 py-5 my-5 text-center">
+    <Container className="px-4 py-5 my-3 text-center">
       <Row>
         <Col lg={6} md={8} sm={10} xs={10} className="mb-4 mx-auto">
           <Image fluid className="mb-4 border border-3 border-primary-subtle rounded-3 shadow-lg" src={jpeg} alt=""/>
@@ -24,22 +24,28 @@ function Home() {
        </Row>
       <Row>
         <Col>
-          <h4 className="text-body-secondary mb-4">Software Engineer</h4>
+          <h4 className="text-body-secondary mb-4">Summary</h4>
         </Col>
       </Row>
       <Row>
         <Col lg={6} md={8} sm={10} xs={10} className="mb-4 mx-auto text-body-secondary">
           {
-            intro.map((item, index) => {
+            summary.map((item, index) => {
               return (
                 <p key={index}>{item}</p>
               )})
           }
         </Col>
       </Row>
-      <Row>
-        <Col>
-          <Link className="btn btn-primary btn-lg px-4" to="/profile">Profile</Link>
+      <Row className="g-2 justify-content-center">
+        <Col xs="auto">
+          <Link className="btn btn-primary btn-lg px-4" to="/education">Education</Link>
+        </Col>
+        <Col xs="auto">
+          <Link className="btn btn-primary btn-lg px-4" to="/skills">Skills</Link>
+        </Col>
+        <Col xs="auto">
+          <Link className="btn btn-primary btn-lg px-4" to="/experience">Experience</Link>
         </Col>
       </Row>
     </Container>
