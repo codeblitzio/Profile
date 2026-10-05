@@ -39,13 +39,13 @@ function Home() {
       </Row>
       <Row className="g-2 justify-content-center">
         <Col xs="auto">
-          <Link className="btn btn-primary btn-lg px-4" to="/education">Education</Link>
+          <Link className="btn btn-outline-primary btn-md px-4" to="/education">Education</Link>
         </Col>
         <Col xs="auto">
-          <Link className="btn btn-primary btn-lg px-4" to="/skills">Skills</Link>
+          <Link className="btn btn-outline-primary btn-md px-4" to="/skills">Skills</Link>
         </Col>
         <Col xs="auto">
-          <Link className="btn btn-primary btn-lg px-4" to="/experience">Experience</Link>
+          <Link className="btn btn-outline-primary btn-md px-4" to="/experience">Experience</Link>
         </Col>
       </Row>
     </Container>

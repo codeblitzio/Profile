@@ -20,7 +20,7 @@ function Contact() {
       </Row>
       <Row>
         <Col>
-          <h2 className="text-primary mb-2">Contact</h2>
+          <h2 className="text-primary mb-4">Contact</h2>
         </Col>
        </Row>
        <Row className="mb-4">
@@ -28,29 +28,27 @@ function Contact() {
           <p className="text-body-secondary">Connect with me</p>
         </Col>
       </Row>
-      <Row className="justify-content-center g-3 mb-4">
-        <Col xs={12} sm="auto">
-          <a className="btn btn-outline-primary d-inline-flex align-items-center justify-content-center gap-2 w-100" href={`mailto:${email}`}>
-            <Image src={icon} alt="" width="18" height="18"/>
-            {email}
-          </a>
-        </Col>
-        <Col xs={12} sm="auto">
-          <a className="btn btn-outline-primary d-inline-flex align-items-center justify-content-center gap-2 w-100" href={socialLinks.linkedInUrl} target="_blank" rel="noreferrer noopener">
-            <Image src={linkedInIcon} alt="" width="18" height="18"/>
-            LinkedIn
-          </a>
-        </Col>
-        <Col xs={12} sm="auto">
-          <a className="btn btn-outline-primary d-inline-flex align-items-center justify-content-center gap-2 w-100" href={socialLinks.twitterUrl} target="_blank" rel="noreferrer noopener">
-            <Image src={twitterIcon} alt="" width="18" height="18"/>
-            X (Twitter)
-          </a>
+      <Row className="justify-content-center mb-4">
+        <Col xs={12} sm={10} md={8} lg={6}>
+          <div className="list-group list-group-flush text-start">
+            <a className="list-group-item list-group-item-action d-flex align-items-center gap-3 py-3" href={`mailto:${email}`}>
+              <Image src={icon} alt="" width="18" height="18"/>
+              <span>{email}</span>
+            </a>
+            <a className="list-group-item list-group-item-action d-flex align-items-center gap-3 py-3" href={socialLinks.linkedInUrl} target="_blank" rel="noreferrer noopener">
+              <Image src={linkedInIcon} alt="" width="18" height="18"/>
+              <span>LinkedIn</span>
+            </a>
+            <a className="list-group-item list-group-item-action d-flex align-items-center gap-3 py-3" href={socialLinks.twitterUrl} target="_blank" rel="noreferrer noopener">
+              <Image src={twitterIcon} alt="" width="18" height="18"/>
+              <span>X (Twitter)</span>
+            </a>
+          </div>
         </Col>
       </Row>
       <Row>
         <Col>
-          <Link className="btn btn-primary btn-lg px-4 gap-3" to="/">Back</Link>
+          <Link className="btn btn-outline-primary btn-md px-4 gap-3" to="/">Back</Link>
         </Col>
       </Row>
     </Container>

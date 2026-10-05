@@ -18,7 +18,7 @@ function NotFound() {
       </Row>
       <Row>
         <Col>
-          <h2 className="text-danger mb-4">404 - Not Found</h2>
+          <h2 className="text-primary mb-4">Not Found</h2>
         </Col>
        </Row>
        <Row>
@@ -28,7 +28,7 @@ function NotFound() {
       </Row>
             <Row>
         <Col>
-          <Link className="btn btn-primary btn-lg px-4 gap-3" to="/">Back</Link>
+          <Link className="btn btn-outline-primary btn-md px-4 gap-3" to="/">Back</Link>
         </Col>
       </Row>
     </Container>

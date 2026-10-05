@@ -13,15 +13,21 @@ function Footer() {
   const twitterUrl = json.twitterUrl;
 
   return (
-    <footer>
+    <footer className="bg-body-tertiary border-top">
       <Container>
-        <Row className="justify-content-between align-items-center py-3 my-3 border-top border-2">
-          <Col className="align-items-center">
-            <Button href="/" variant="link" className="lh-1">&copy; {new Date().getFullYear()} CodeBlitz</Button>
+        <Row className="justify-content-center justify-content-sm-between align-items-center gap-3 py-4">
+          <Col xs="auto">
+            <Button href="/" variant="link" className="lh-1 text-body-secondary text-decoration-none p-0">&copy; {new Date().getFullYear()} CodeBlitz</Button>
           </Col>
-          <Col className="nav col-md-4 justify-content-end align-items-center list-unstyled">
-            <li className="ms-3"><a href={linkedInUrl} target="_blank"><Image className="bi" width="24" height="24" src={linkedIn} alt="LinkedIn" /></a></li>
-            <li className="ms-3"><a href={twitterUrl} target="_blank"><Image className="bi" width="24" height="24" src={twitterX} alt="X"/></a></li>
+          <Col xs="auto">
+            <nav aria-label="Social links" className="d-flex gap-2">
+              <a className="btn btn-outline-primary rounded-circle p-2 d-inline-flex align-items-center justify-content-center" href={linkedInUrl} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <Image width="20" height="20" src={linkedIn} alt="" />
+              </a>
+              <a className="btn btn-outline-primary rounded-circle p-2 d-inline-flex align-items-center justify-content-center" href={twitterUrl} target="_blank" rel="noopener noreferrer" aria-label="X">
+                <Image width="20" height="20" src={twitterX} alt="" />
+              </a>
+            </nav>
           </Col>
         </Row>
       </Container>
