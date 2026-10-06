@@ -6,6 +6,7 @@ import Accordion from 'react-bootstrap/Accordion';
 import { Link } from 'react-router'
 import json from "./experience.json";
 import icon from 'bootstrap-icons/icons/briefcase-fill.svg';
+import './Experience.css';
 
 interface IExperience{
   company: string,
@@ -33,7 +34,7 @@ function Experience() {
        </Row>
       <Row>
         <Col lg={6} md={8} sm={10} xs={10} className="mx-auto text-body-secondary">
-          <Accordion defaultActiveKey="0" className="mb-4">
+          <Accordion defaultActiveKey="0" className="experience-accordion mb-4">
             {
               experience.map((item, index) => {
                 return (

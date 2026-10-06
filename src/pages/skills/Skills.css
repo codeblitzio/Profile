@@ -1,0 +1,10 @@
+.skills-list .list-group-item {
+  transition: box-shadow 180ms ease, background-color 180ms ease;
+}
+
+.skills-list .list-group-item:hover {
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 1px 4px rgba(70, 75, 80, 0.12);
+  background-color: #f1f2f3;
+}

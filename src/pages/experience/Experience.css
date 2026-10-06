@@ -1,0 +1,13 @@
+.experience-accordion .accordion-item {
+  transition: box-shadow 180ms ease;
+}
+
+.experience-accordion .accordion-item:hover {
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 1px 4px rgba(70, 75, 80, 0.12);
+}
+
+.experience-accordion .accordion-item:hover .accordion-button {
+  background-color: #f1f2f3;
+}

@@ -17,7 +17,7 @@ function Footer() {
       <Container>
         <Row className="justify-content-center justify-content-sm-between align-items-center gap-3 py-4">
           <Col xs="auto">
-            <Button href="/" variant="link" className="lh-1 text-body-secondary text-decoration-none p-0">&copy; {new Date().getFullYear()} CodeBlitz</Button>
+            <Button href="/" variant="link" className="lh-1 text-body-secondary text-decoration-none p-0">&copy; {new Date().getFullYear()} Codeblitz</Button>
           </Col>
           <Col xs="auto">
             <nav aria-label="Social links" className="d-flex gap-2">

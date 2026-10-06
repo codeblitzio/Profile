@@ -6,6 +6,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import { Link } from 'react-router';
 import json from "./education.json";
 import icon from 'bootstrap-icons/icons/mortarboard-fill.svg';
+import './Education.css';
 
 interface IEducation{
   qualifications: string[],
@@ -35,7 +36,7 @@ function Education() {
       </Row>
       <Row>
         <Col lg={6} md={8} sm={10} xs={10} className="mx-auto text-body-secondary">
-          <ListGroup className="mb-4">
+          <ListGroup className="education-list mb-4">
             {
               education.qualifications.map((item, index) => {
                 return (
@@ -52,7 +53,7 @@ function Education() {
       </Row>
       <Row>
         <Col lg={6} md={8} sm={10} xs={10} className="mx-auto text-body-secondary">
-          <ListGroup className="mb-4">
+          <ListGroup className="education-list mb-4">
             {
               education.certifications.map((item, index) => {
                 return (

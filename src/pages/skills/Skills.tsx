@@ -6,6 +6,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import { Link } from 'react-router';
 import json from "./skills.json";
 import icon from 'bootstrap-icons/icons/tools.svg';
+import './Skills.css';
 
 function Skills() {
 
@@ -25,7 +26,7 @@ function Skills() {
       </Row>
       <Row>
         <Col lg={6} md={8} sm={10} xs={10} className="mx-auto text-body-secondary">
-          <ListGroup className="mb-4">
+          <ListGroup className="skills-list mb-4">
             {
               skills.map((item, index) => {
                 return (
