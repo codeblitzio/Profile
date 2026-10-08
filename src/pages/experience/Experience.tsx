@@ -21,10 +21,10 @@ function Experience() {
   const experience: IExperience[] = json.experience;
 
   return (
-    <Container className="px-4 py-5 my-3 text-center">
+    <Container className="px-4 py-4 my-3 text-center">
       <Row>
         <Col>
-          <Image className="mb-4" src={icon} alt="" width="50" height="50"/>
+          <Image src={icon} alt="" width="50" height="50"/>
         </Col>  
       </Row>
       <Row>
