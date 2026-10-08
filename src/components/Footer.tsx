@@ -1,8 +1,8 @@
 import Container from 'react-bootstrap/container';
-import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
+import { NavLink } from 'react-router';
 import json from "./footer.json";
 import linkedIn from 'bootstrap-icons/icons/linkedin.svg';
 import twitterX from 'bootstrap-icons/icons/twitter-x.svg';
@@ -17,7 +17,7 @@ function Footer() {
       <Container>
         <Row className="justify-content-center justify-content-sm-between align-items-center gap-3 py-4">
           <Col xs="auto">
-            <Button href="/" variant="link" className="lh-1 text-body-secondary text-decoration-none p-0">&copy; {new Date().getFullYear()} Codeblitz</Button>
+            <NavLink to="/" className="btn btn-link lh-1 text-body-secondary text-decoration-none p-0">&copy; {new Date().getFullYear()} Codeblitz</NavLink>
           </Col>
           <Col xs="auto">
             <nav aria-label="Social links" className="d-flex gap-2">

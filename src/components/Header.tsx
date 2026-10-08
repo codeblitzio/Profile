@@ -9,7 +9,7 @@ function Header() {
   return (
     <header>
       <Navbar bg="primary" data-bs-theme="dark" expand="md" className="py-2 shadow-sm">
-        <Container>
+        <Container fluid>
           <Navbar.Brand as={NavLink} to="/" className="fw-semibold">Codeblitz</Navbar.Brand>
           <Navbar.Toggle/>
           <Navbar.Collapse>
