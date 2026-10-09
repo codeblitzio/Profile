@@ -22,11 +22,6 @@ function Contact() {
         <Col>
           <h2 className="text-primary mb-4">Contact</h2>
         </Col>
-       </Row>
-       <Row className="mb-4">
-        <Col>
-          <p className="text-body-secondary">Connect with me</p>
-        </Col>
       </Row>
       <Row className="justify-content-center mb-4">
         <Col xs={12} sm={10} md={8} lg={6}>

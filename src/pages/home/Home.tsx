@@ -13,7 +13,7 @@ function Home() {
   return (
     <Container className="px-4 py-4 my-3 text-center">
       <Row>
-        <Col lg={6} md={8} sm={10} xs={10} className="mb-4 mx-auto">
+        <Col lg={6} md={8} sm={10} xs={10} className="mb-4 mx-auto" style={{ maxWidth: '380px' }}>
           <Image fluid className="border border-3 border-primary-subtle rounded-3 shadow-lg" src={jpeg} alt=""/>
         </Col>  
       </Row>
